@@ -1,23 +1,17 @@
-# embedder.py
+# embedder.py (local version)
 
-import os
-from openai import OpenAI
-from dotenv import load_dotenv
+from sentence_transformers import SentenceTransformer
 
-# Load .env file and get API key
-load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# Load a small, fast local model
+model = SentenceTransformer('all-MiniLM-L6-v2')
 
-def get_embedding(text, model="text-embedding-3-small"):
+def get_embedding(text):
     """
-    Returns the embedding vector for a given text using OpenAI's v1 client.
+    Returns the embedding vector for a given text using a local model.
     """
     try:
-        response = client.embeddings.create(
-            input=text,
-            model=model
-        )
-        return response.data[0].embedding
+        embedding = model.encode(text)
+        return embedding.tolist()  # Return as a plain list
     except Exception as e:
         print(f"Failed to get embedding: {e}")
         return None
