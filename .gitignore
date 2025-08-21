@@ -18,7 +18,6 @@ env/
 
 # 📊 Output / Index Files
 *.json
-/Users/marcanjoul/Documents/Programming Projects/Personal Projects/NoteWeb (Python)/embeddings_index.json
 
 # 🧼 macOS System Files
 .DS_Store
@@ -35,6 +34,3 @@ ollama_models/
 # 🛠 VSCode or PyCharm settings
 .vscode/
 .idea/
-
-# JSON Fle
-embeddings_index.json
