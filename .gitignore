@@ -18,7 +18,7 @@ env/
 
 # 📊 Output / Index Files
 *.json
-embeddings_index.json
+/Users/marcanjoul/Documents/Programming Projects/Personal Projects/NoteWeb (Python)/embeddings_index.json
 
 # 🧼 macOS System Files
 .DS_Store
