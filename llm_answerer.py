@@ -17,8 +17,8 @@ def build_prompt(query, top_chunks, history=None):
             history_prompt += f"Q: {pair['question']}\nA: {pair['answer']}\n"
 
     return (
-        "You are a helpful assistant trained to answer academic questions from imported doc(s), "
-        "be clear, concise, and helpful when answering the following question(s)!\n"
+        "You are trained to answer academic questions from imported doc(s), "
+        "be clear, concise, a little casual, and helpful when answering the following question(s)!\n"
         f"Context:\n{combined_chunks}\n"
         f"Question: {query}"
     )

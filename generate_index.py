@@ -1,34 +1,39 @@
-import json                      # to save the index as a .json file
-from embedder import get_embedding  # to use your embedding function
+import os
+import json
+from files_loader import extract_text_from_file
 from chunker import chunk_text
-from file_loader import extract_text_from_multiple_pdfs 
-
-# List of PDF files to process
-pdf_files = ["PDFs/Mindset copy.pdf", "PDFs/Retention of Learning & Rehearsal copy.pdf"]  # Add your actual filenames here
-
-
-pdf_files = [
-    "PDFs/Mindset copy.pdf",
-    "PDFs/Retention of Learning & Rehearsal copy.pdf"
-]
-
-text = extract_text_from_multiple_pdfs(pdf_files)
+from embedder import get_embedding
 
 index = []
-chunks = chunk_text(text)
 
-print(f"🔍 Loaded {len(chunks)} chunks from the PDF.")
+# 1. Path to your folder (can include PDFs, .docx, .pptx, etc.)
+folder_path = "test files"  # rename to match your actual folder
+file_names = os.listdir(folder_path)
 
-for chunk in chunks:
-    embedding = get_embedding(chunk)
-    if embedding:  # Only add to index if embedding was successful
-        index.append({
-            "text": chunk,
-            "embedding": embedding
-        })
+# 2. Process each file
+for file_name in file_names:
+    file_path = os.path.join(folder_path, file_name)
+    print(f"📄 Processing: {file_name}")
 
-# Save the index to a file
-with open("embeddings_index.json", "w") as json_file:
-    json.dump(index, json_file, indent=4)
+    text = extract_text_from_file(file_path)
 
+    if not text.strip():
+        print(f"⚠️ Skipped (empty or unsupported): {file_name}")
+        continue
 
+    chunks = chunk_text(text)
+    print(f"🧩 {len(chunks)} chunks created")
+
+    for chunk in chunks:
+        embedding = get_embedding(chunk)
+        if embedding:
+            index.append({
+                "text": chunk,
+                "embedding": embedding
+            })
+
+# 3. Save the final index
+with open("embeddings_index.json", "w") as f:
+    json.dump(index, f)
+
+print("✅ Indexing complete. Saved to embeddings_index.json")
