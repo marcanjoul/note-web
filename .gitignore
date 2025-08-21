@@ -35,3 +35,6 @@ ollama_models/
 # 🛠 VSCode or PyCharm settings
 .vscode/
 .idea/
+
+# JSON Fle
+embeddings_index.json
