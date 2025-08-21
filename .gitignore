@@ -1,9 +1,40 @@
-# Ignore Python virtual environment
-venv/
-
-# Ignore API key
-.env
-
-# Ignore temporary files
+# 🐍 Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.sqlite3
+
+# 📦 Virtual Environments
+venv/
+env/
+.venv/
+
+# 🔐 Sensitive Files
+.env
+*.key
+*.pem
+
+# 🧪 Local Test Files
+test files/
+
+# 📊 Output / Index Files
+*.json
+embeddings_index.json
+
+# 🧼 macOS System Files
+.DS_Store
+
+# 🤖 Ollama Cache (if any)
+ollama_models/
+
+# 🧪 IPython / Jupyter
+.ipynb_checkpoints/
+
+# 🧪 Logs and Debugging
+*.log
+
+# 🛠 VSCode or PyCharm settings
+.vscode/
+.idea/
