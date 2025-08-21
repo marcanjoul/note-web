@@ -16,9 +16,6 @@ env/
 *.key
 *.pem
 
-# 🧪 Local Test Files
-test files/
-
 # 📊 Output / Index Files
 *.json
 embeddings_index.json
