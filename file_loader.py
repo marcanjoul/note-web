@@ -23,3 +23,19 @@ def extract_text_from_pdf(file_path):
     
     return text  # Return all the collected text
 
+def extract_text_from_multiple_pdfs(file_paths):
+    """
+    Extracts and combines text from multiple PDF files.
+
+    Args:
+        file_paths (List[str]): A list of paths to PDF files.
+
+    Returns:
+        str: Combined text from all PDFs.
+    """
+    combined_text = ""
+    for path in file_paths:
+        print(f" Extracting: {path}")
+        combined_text += extract_text_from_pdf(path) + "\n"
+    return combined_text
+

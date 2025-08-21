@@ -1,9 +1,19 @@
 import json                      # to save the index as a .json file
 from embedder import get_embedding  # to use your embedding function
 from chunker import chunk_text
-from file_loader import extract_text_from_pdf
+from file_loader import extract_text_from_multiple_pdfs 
 
-text = extract_text_from_pdf("Test PDF.pdf")
+# List of PDF files to process
+pdf_files = ["PDFs/Mindset copy.pdf", "PDFs/Retention of Learning & Rehearsal copy.pdf"]  # Add your actual filenames here
+
+
+pdf_files = [
+    "PDFs/Mindset copy.pdf",
+    "PDFs/Retention of Learning & Rehearsal copy.pdf"
+]
+
+text = extract_text_from_multiple_pdfs(pdf_files)
+
 index = []
 chunks = chunk_text(text)
 
