@@ -33,7 +33,7 @@ def build_prompt(query, top_chunks, history=None):
         "You're a helpful, friendly assistant. Use a casual, conversational tone and avoid sounding robotic. "
         "Answer questions based on the provided document(s) and use any previous conversation for context. "
         "Don't ask for greetings or introductions—just continue the chat naturally.\n"
-        f"{'Conversation history:\n' + history_prompt if history_prompt else ''}"
+        f"{'Conversation history:' + history_prompt if history_prompt else ''}"
         f"Context:\n{combined_chunks}\n"
         f"Question: {query}"
     )
