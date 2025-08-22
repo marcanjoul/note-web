@@ -82,13 +82,13 @@ Or, if you downloaded the ZIP, unzip it and navigate into the folder via:
 ```bash
 cd ~/Desktop/noteweb-main  # or wherever you saved it
 ```
-2. Set Up a Virtual Environment
+### 2. Set Up a Virtual Environment
 We recommend using a virtual environment to keep dependencies clean:
 ```bash
 python3 -m venv venv
 source venv/bin/activate  # (for mac) # On Windows, use venv\Scripts\activate
 ```
-4. Install Dependencies
+### 3. Install Dependencies
 Run the following to install all required packages:
 ```bash
 pip install -r requirements.txt
@@ -97,13 +97,13 @@ If needed, manually install these extras:
 ```bash
 pip install python-docx python-pptx openpyxl sentence-transformers
 ```
-6. Add Your Files
+### 4. Add Your Files
 Create or drop any files you want to search into the test files/ directory. Supported formats:
 .pdf
 .docx
 .pptx
 .xlsx
-7. Run this to generate semantic embeddings from files in your folder
+### 5. Run this to generate semantic embeddings from files in your folder
 ```bash
 python generate_index.py
 ```
@@ -113,7 +113,7 @@ This will:
 - Embed each chunk using sentence-transformers
 - Save everything to embeddings_index.json
 
-8. Search Your Files with the AI
+### 6. Search Your Files with the AI
 ```bash
 python search.py
 ```
