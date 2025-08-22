@@ -70,11 +70,40 @@ noteweb/
 ---
 
 ## 🧪 How to Use
+## 🚀 How to Use
 
-### 🔹 1. Index your files (PDF, DOCX, PPTX)
+### 1. Clone the Repository
 
-Run this to generate semantic embeddings from files in your folder:
-
+```bash
+git clone https://github.com/yourusername/noteweb.git
+cd noteweb
+```
+Or, if you downloaded the ZIP, unzip it and navigate into the folder via:
+```bash
+cd ~/Desktop/noteweb-main  # or wherever you saved it
+```
+2. Set Up a Virtual Environment
+We recommend using a virtual environment to keep dependencies clean:
+```bash
+python3 -m venv venv
+source venv/bin/activate  # (for mac) # On Windows, use venv\Scripts\activate
+```
+4. Install Dependencies
+Run the following to install all required packages:
+```bash
+pip install -r requirements.txt
+```
+If needed, manually install these extras:
+```bash
+pip install python-docx python-pptx openpyxl sentence-transformers
+```
+6. Add Your Files
+Create or drop any files you want to search into the test files/ directory. Supported formats:
+.pdf
+.docx
+.pptx
+.xlsx
+7. Run this to generate semantic embeddings from files in your folder
 ```bash
 python generate_index.py
 ```
@@ -84,6 +113,32 @@ This will:
 - Embed each chunk using sentence-transformers
 - Save everything to embeddings_index.json
 
+8. Search Your Files with the AI
+```bash
+python search.py
+```
+This will:
+- Search your indexed chunks for relevant context
+- Pass top matches to **LLaMA 3**
+- Return an answer based on your notes
+- You can also ask follow-up questions, as NoteWeb remembers the context!
+  
+💡 Example Usage
+> What is the difference between supervised and unsupervised learning?
+
+❗ Requirements
+Make sure you have:
+- Python 3.9+
+- pip
+- Optional: Ollama installed and running (for local LLaMA 3 support)
+
+💡 Optional: Skip venv (Not Recommended)
+You can also run NoteWeb without using a virtual environment:
+
+```bash
+pip install -r requirements.txt
+pip install python-docx python-pptx openpyxl sentence-transformers
+```
 ---
 
 ### 🔹 2. Ask a question
@@ -91,13 +146,6 @@ This will:
 ```bash
 python main.py --search "What is instruction-level parallelism?"
 ```
-
-This will:
-- Search your indexed chunks for relevant context
-- Pass top matches to **LLaMA 3**
-- Return an answer based on your notes
-- You can also ask follow-up questions, as NoteWeb remembers the context!
-
 ---
 
 ## 🧠 Why This Matters
