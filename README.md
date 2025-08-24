@@ -7,35 +7,25 @@
 [![Status](https://img.shields.io/badge/Status-Active_Development-orange)](#roadmap)
 [![First AI Project](https://img.shields.io/badge/My_First_AI_Project-%F0%9F%A4%96-lightgrey)](#)
 
-> ✨ A local-first AI-powered tool to **search, summarize, and understand your notes** — built for students, by a student.  
+>  A local-first AI-powered tool to **search, summarize, and understand your notes** — built for students, by a student.  
 > Uses chunking, vector embeddings, and LLaMA 3 via Ollama for real semantic understanding.
 
 ---
 
-## 📽 Demo
+##  Features
 
-> *(GIF goes here — drag it in after creating it)*
-
-```markdown
-![Demo](./demo.gif)
-```
-
----
-
-## 🚀 Features
-
-- 📚 Index PDFs, Word, Excel, and PowerPoint files into semantic chunks
-- 🧩 Embed and store those chunks using vector search
-- 🤖 Ask questions using LLaMA 3 via Ollama (offline + local)
-- 🔍 Get answers with real context grounding (like the ChatGPT Retrieval Plugin)
-+ - 🧠 Follow-up question support with persistent memory
-+ - 🗂 Ingest multiple files at once from a folder
-+ - 🧪 Test-ready with `test files/` folder
+- Index PDFs, Word, Excel, and PowerPoint files into semantic chunks
+- Embed and store those chunks using vector search
+- Ask questions using LLaMA 3 via Ollama (offline + local)
+- Get answers with real context grounding (like the ChatGPT Retrieval Plugin)
++ - Follow-up question support with persistent memory
++ - Ingest multiple files at once from a folder
++ - Test-ready with `test files/` folder
 
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 noteweb/
@@ -54,7 +44,7 @@ noteweb/
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 - Python **3.11+**
 - [Ollama](https://ollama.com) installed and running
@@ -69,7 +59,7 @@ noteweb/
 
 ---
 
-## 🧪 How to Use
+## How to Use
 
 ### 1. Clone the Repository
 
@@ -140,14 +130,14 @@ pip install python-docx python-pptx openpyxl sentence-transformers
 ```
 ---
 
-### 🔹 2. Ask a question
+### 2. Ask a question
 
 ```bash
 python main.py --search "What is instruction-level parallelism?"
 ```
 ---
 
-## 🧠 Why This Matters
+## Why This Matters
 
 NoteWeb simulates *real retrieval-augmented generation (RAG)* — the same strategy used in:
 - ChatGPT w/ File Uploads
@@ -163,7 +153,7 @@ Perfect for learning how vector search + LLMs work together.
 
 ---
 
-## 📄 File Support
+## File Support
 
 - ✅ PDF  
 + - ✅ DOCX (.docx)  
@@ -175,7 +165,7 @@ You can drop files into the `test files/` folder!
 
 ---
 
-## 🛣️ Roadmap
+## Roadmap
 
 - [x] Multi-file indexing (entire folders at once)
 - [x] DOCX, PPTX, and XLSX support
@@ -189,18 +179,18 @@ You can drop files into the `test files/` folder!
 
 ---
 
-## 📌 Project Status
+## Project Status
 
 NoteWeb is my **first AI-integrated project** — made while learning:
-- 🤖 How LLMs like LLaMA work
-- 🔎 What “semantic search” really means
-- 🧱 How chunking, embeddings, and vector stores come together
+- How LLMs like LLaMA work
+- What “semantic search” really means
+- How chunking, embeddings, and vector stores come together
 
 This is the foundation for bigger projects — search tools, academic companions, even personalized AI.
 
 ---
 
-## 🙏 Credits
+## Credits
 
 - Built with 💻 and ☕ by [@marcanjoul](https://github.com/marcanjoul)
 - PDF parsing via [`PyMuPDF`](https://pymupdf.readthedocs.io/)
@@ -213,5 +203,5 @@ This is the foundation for bigger projects — search tools, academic companions
 
 ---
 
-### 💬 Want to improve or collaborate?
-> Open an issue, drop a PR, or fork it and make it your own. More to come 🔥
+### Want to improve or collaborate?
+> Open an issue, drop a PR, or fork it and make it your own.I'd appreciate any feedback!
