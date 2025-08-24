@@ -75,7 +75,7 @@ noteweb/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/noteweb.git
+git clone https://github.com/marcanjoul/noteweb.git
 cd noteweb
 ```
 Or, if you downloaded the ZIP, unzip it and navigate into the folder via:
