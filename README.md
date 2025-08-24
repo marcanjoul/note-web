@@ -112,25 +112,24 @@ This will:
 - Return an answer based on your notes
 - You can also ask follow-up questions, as NoteWeb remembers the context!
   
-💡 Example Usage
-> What is the difference between supervised and unsupervised learning?
+  💡 Example Usage
+  > What is the difference between supervised and unsupervised learning?
 
-❗ Requirements
-Make sure you have:
-- Python 3.9+
-- pip
-- Optional: Ollama installed and running (for local LLaMA 3 support)
+  ❗Requirements
+  Make sure you have:
+  - Python 3.9+
+  - pip
+  - Optional: Ollama installed and running (for local LLaMA 3 support)
+  
+  💡 Optional: Skip venv (Not Recommended)
+  You can also run NoteWeb without using a virtual environment:
 
-💡 Optional: Skip venv (Not Recommended)
-You can also run NoteWeb without using a virtual environment:
+  ```bash
+  pip install -r requirements.txt
+  pip install python-docx python-pptx openpyxl sentence-transformers
+  ```
 
-```bash
-pip install -r requirements.txt
-pip install python-docx python-pptx openpyxl sentence-transformers
-```
----
-
-### 2. Ask a question
+### 7. Ask a question
 
 ```bash
 python main.py --search "What is instruction-level parallelism?"
@@ -173,8 +172,7 @@ You can drop files into the `test files/` folder!
 - [x] Optional toggle in code for chunk visibility
 - [ ] Index caching to skip re-embedding unchanged files
 - [ ] Command-line UI / TUI
-- [ ] Streamed LLaMA answers with citations
-- [ ] Web UI or notebook wrapper?
+- [ ] Web UI
 
 
 ---
